@@ -1,0 +1,18 @@
+.order-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #212529; /* Warna gelap untuk menyesuaikan tema */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.order-button:hover {
+    background-color: #343a40; /* Warna sedikit lebih terang saat hover */
+}

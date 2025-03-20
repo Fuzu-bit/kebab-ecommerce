@@ -1,0 +1,160 @@
+/* Import Font Custom */
+@font-face {
+    font-family: 'ComicNeueBoldItalic';
+    src: url('../assets/fonts/ComicNeue-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  /* Body */
+  body {
+    margin: 0;
+    font-family: 'ComicNeueBoldItalic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333;
+  }
+  
+  /* Menu Hero di dalam Container */
+  .menu-container .menu-hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .menu-container .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .menu-container .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .menu-container .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .menu-container .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .menu-container .lihat-menu-btn {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .menu-container .lihat-menu-btn:hover {
+    background-color: #E03E00;
+    transform: scale(1.05);
+  }
+  
+  /* Menu Container */
+  .menu-container {
+    padding-top: 0;
+    padding-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+  }
+  
+  /* Judul Menu */
+  .menu-title {
+    font-size: 2.8rem;
+    color: #0078FF;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid Menu */
+  .menu-section-title {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #0044ff;
+    font-weight: bold;
+  }
+  
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #0044ff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.562);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Gambar Menu */
+  .menu-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Tombol Pesan Sekarang */
+  .order-btn {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .order-btn:hover {
+    background-color: #E03E00;
+    transform: scale(1.05);
+  }
+  
+  /* Divider untuk Memisahkan Kategori */
+  .menu-divider {
+    border: 1px solid #0044ff;
+    margin: 30px 0;
+  }
+  
+  /* Deskripsi Menu */
+  .menu-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,113 @@
+/* Container Utama */
+@font-face {
+    font-family: 'ComicNeueBoldItalic';
+    src: url('../assets/fonts/ComicNeue-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.promo-container {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff330028, #7bdffe85); /* Gradasi sunset */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Judul Halaman Promo */
+.promo-title {
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 30px;
+}
+
+/* Daftar Promo */
+.promo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Kartu Promo */
+.promo-card {
+    background-color: #fff;
+    border: 3px solid #00a2ff;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 340px;
+    overflow: hidden;
+    text-align: left;
+    padding: 15px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.promo-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 247, 255, 0.9);
+}
+
+/* Badge Diskon */
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #00a2ff;
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 50px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    transform: rotate(-10deg);
+}
+
+/* Gambar Promo */
+.promo-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #00a2ff;
+    margin-bottom: 10px;
+}
+
+/* Judul & Deskripsi Promo */
+.promo-card h3 {
+    color: #00a2ff;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+.promo-card p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Tombol CTA */
+.promo-cta {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #00a2ff;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.promo-cta:hover {
+    background-color: #ff5f5f;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
