@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './Menu.css';
 import heroImage from '../assets/images/hero.jpg';
@@ -31,41 +31,41 @@ const MenuPage = () => {
   const formatHarga = (harga) => `Rp ${harga.toLocaleString('id-ID')}`;
 
   const renderMenu = (title, items, nameKey, priceKey) => (
-    <>
-      <h2 className="menu-section-title">{title}</h2>
+    <div className="menu-category">
+      <h2>{title}</h2>
       <Row>
         {items.map((item, index) => (
-          <Col key={index} lg={4} md={6} sm={12} className="mb-4">
-            <div className="menu-card">
-              <h4>{item[nameKey]}</h4>
+          <Col key={index} lg={3} md={6} sm={12} className="mb-4">
+            <div className="menu-item">
+              <img src={item.gambar_Minuman || item.gambar_Kebab || item.gambar_Paket || item.gambar_Snack} alt={item[nameKey]} className="menu-image" />
+              <h3>{item[nameKey]}</h3>
+              <p className="menu-description">Description of {item[nameKey]}</p>
               <p className="menu-price">{formatHarga(item[priceKey])}</p>
-              <Button className="order-btn">Pesan Sekarang</Button>
+              <Button variant="primary" className="order-now-btn">Pesan Sekarang</Button> {/* Tambahkan tombol */}
             </div>
           </Col>
         ))}
       </Row>
-      <hr className="menu-divider" />
-    </>
+    </div>
   );
 
   return (
     <>
-      <Container className="menu-container">
-        {/* Bagian Hero di dalam Kontainer */}
-        <div className="menu-hero">
-          <img src={heroImage} alt="Menu Kami" className="hero-image" />
-          <div className="hero-content">
-            <h1>Menu Kami</h1>
-            <p>Cari, Pilih dan Pesan Menu Yang Telah Kami Sediakan</p>
-            <Button className="lihat-menu-btn">Lihat Menu</Button>
-          </div>
+      <div className="menu-hero">
+        <img src={heroImage} alt="Menu Kami" className="hero-image" />
+        <div className="hero-content">
+          <h1>Menu Kami</h1>
+          <p>Cari, Pilih dan Pesan Menu Yang Telah Kami Sediakan</p>
+          <button className="lihat-menu-btn">Lihat Menu</button>
         </div>
+      </div>
 
-        {renderMenu("Minuman", drinks, 'nama_Minuman', 'harga', 'gambar_Minuman')}
-        {renderMenu("Kebab", kebabs, 'nama_Kebab', 'harga', 'gambar_Kebab')}
-        {renderMenu("Paket Makanan", packages, 'nama_Paket', 'harga_Paket', 'gambar_Paket')}
-        {renderMenu("Snack", snacks, 'nama_Snack', 'harga', 'gambar_Snack')}
-      </Container>
+      <div className="menu-content-area">
+        {renderMenu("Makanan", kebabs, 'nama_Kebab', 'harga')}
+        {renderMenu("Minuman", drinks, 'nama_Minuman', 'harga')}
+        {renderMenu("Paket Makanan", packages, 'nama_Paket', 'harga_Paket')}
+        {renderMenu("Snack", snacks, 'nama_Snack', 'harga')}
+      </div>
     </>
   );
 };

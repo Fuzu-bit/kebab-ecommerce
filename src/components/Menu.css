@@ -13,148 +13,146 @@
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     font-style: italic;
-    background-image: url('../assets/images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     color: #333;
+    background-color: #f8f9fa;
   }
   
-  /* Menu Hero di dalam Container */
-  .menu-container .menu-hero {
-    position: relative;
+  /* Menu Hero */
+  .menu-hero {
     width: 100%;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
-    border-radius: 15px 15px 0 0;
+    position: relative;
+    margin-top: 830px;
+    padding: 0;
   }
   
-  .menu-container .hero-image {
+  .menu-hero .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-height: 400px;
+    filter: brightness(0.6);
   }
   
-  .menu-container .hero-content {
+  .menu-hero .hero-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    z-index: 1;
+    z-index: 2;
   }
   
-  .menu-container .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 8px;
+  .menu-hero .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
   }
   
-  .menu-container .hero-content p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-  
-  .menu-container .lihat-menu-btn {
-    background-color: #FF4500;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  .menu-container .lihat-menu-btn:hover {
-    background-color: #E03E00;
-    transform: scale(1.05);
-  }
-  
-  /* Menu Container */
-  .menu-container {
-    padding-top: 0;
-    padding-bottom: 50px;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-  }
-  
-  /* Judul Menu */
-  .menu-title {
-    font-size: 2.8rem;
-    color: #0078FF;
-    text-align: center;
+  .menu-hero .hero-content p {
+    font-size: 1.2rem;
     margin-bottom: 20px;
   }
   
-  /* Grid Menu */
-  .menu-section-title {
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    color: #0044ff;
-    font-weight: bold;
-  }
-  
-  .menu-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #0044ff;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.562);
-    transition: transform 0.3s ease;
-  }
-  
-  .menu-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Gambar Menu */
-  .menu-image {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  /* Tombol Pesan Sekarang */
-  .order-btn {
+  .menu-hero .lihat-menu-btn {
     background-color: #FF4500;
     color: #fff;
     border: none;
     border-radius: 8px;
-    padding: 8px 16px;
+    padding: 12px 24px;
     cursor: pointer;
-    margin-top: 8px;
-    width: 100%;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  .order-btn:hover {
+  .menu-hero .lihat-menu-btn:hover {
     background-color: #E03E00;
     transform: scale(1.05);
   }
   
-  /* Divider untuk Memisahkan Kategori */
-  .menu-divider {
-    border: 1px solid #0044ff;
-    margin: 30px 0;
+  /* Menu Content Area */
+  .menu-content-area {
+    padding: 40px;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
   
-  /* Deskripsi Menu */
+  /* Menu Category */
+  .menu-category {
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  .menu-category h2 {
+    text-align: left;
+    margin-bottom: 30px;
+    color: #0044ff;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  /* Menu Item */
+  .menu-item {
+    text-align: left;
+  }
+  
+  .menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
   .menu-description {
-    font-size: 0.9rem;
-    color: #666;
+    color: #444;
+    line-height: 1.5;
     margin-bottom: 10px;
+  }
+  
+  .menu-price {
+    font-weight: bold;
+    color: #FF4500;
+    margin-bottom: 15px;
+  }
+  
+  /* Tombol Pesan Sekarang */
+  .order-now-btn {
+    background-color: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .order-now-btn:hover {
+    background-color: #E03E00;
+    transform: scale(1.05);
+  }
+
+  /* Media Query untuk Responsif */
+  @media (max-width: 768px) {
+    .menu-hero .hero-content h1 {
+      font-size: 2rem;
+    }
+
+    .menu-content-area {
+      padding: 20px;
+    }
+
+    .menu-image {
+      height: 150px;
+    }
   }

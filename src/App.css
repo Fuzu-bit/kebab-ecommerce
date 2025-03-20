@@ -16,6 +16,10 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
-  z-index: 1000; /* Agar tombol tetap terlihat di atas elemen lain */
+  z-index: 1000;
 }
 
+/* Tambahkan gaya untuk kontainer di app.js */
+.mt-4.container {
+  margin-top: 30px; /* Sesuaikan margin-top agar tidak tertutup navbar */
+}
